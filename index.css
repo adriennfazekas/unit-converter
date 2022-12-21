@@ -4,12 +4,42 @@
 
 body {
     margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #F4F4F4;
 }
 
 .header {
-    background-color: red;
+    background-color: #6943FF;
+}
+
+h1{
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 38px;
+    text-align: center;
+}
+
+input {
+    text-align: center;
+}
+
+button {
+    display: block;
+    margin-top: 25px;
+    text-align: center;
 }
 
 .convert-container {
-    background-color: green;
+    background-color: #F4F4F4;
+}
+
+#length-el, #volume-el, #mass-el {
+    background-color: white;  
+}
+
+h2 {
+    color: #5A537B;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 20px;
 }
