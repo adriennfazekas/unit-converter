@@ -9,7 +9,7 @@ body {
     text-align: center;
 }
 
-.header, input {
+.container {
     background-color: #6943FF;
 }
 
@@ -28,13 +28,13 @@ input {
     height: 83px;
     font-size: 58px;
     color: white;
+    background-color: #6943FF;
     text-align: center;
 }
 
 button {
-    display: block;
     margin-top: 2rem;
-
+    margin-bottom: 30px;
     text-align: center;
     padding: 6 20 6 20;
     border-radius: 5px;
@@ -44,10 +44,14 @@ button {
     font-size: 16px;
     line-height: 24px;
 }
+button:hover {
+    background-color: #adedd9;
+}
 
 .convert-container {
     background-color: #F4F4F4;
-    margin: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 #length-el, #volume-el, #mass-el {
