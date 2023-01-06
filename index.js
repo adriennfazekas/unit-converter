@@ -8,36 +8,24 @@ let massResult = document.getElementById("mass-result")
 
 convertBtn.addEventListener("click", function() {
     dataToConvert = inputEl.value
-    meterToFeet(dataToConvert)
-    literToGallon(dataToConvert)
-    kilogramToPounds(dataToConvert)
+
+    lengthResult.innerHTML = convert(dataToConvert, 3.281, "meters", "feet")
+    
+    volumeResult.innerHTML = convert(dataToConvert, 0.264, "liters", "gallons")
+
+    massResult.innerHTML = convert(dataToConvert, 2.204, "kilograms", "pounds")
     
 })
 
-function meterToFeet(input) {
-    let convertedLength = ""
-    let feet = input
-    let meters = input
-    feet = input * 3.281
-    meters = input / 3.281
-    convertedLength = ` ${input} meters = ${feet.toFixed(3)} feet | ${input} feet = ${meters.toFixed(3)} meters `
-    lengthResult.innerHTML = convertedLength
-}
-function literToGallon(input) {
-    let convertedVolume = ""
-    let gallon = input
-    let liter = input
-    gallon = input * 0.264
-    liter = input / 0.264
-    convertedVolume = ` ${input} liters = ${gallon.toFixed(3)} gallons | ${input} gallons = ${liter.toFixed(3)} liters `
-    volumeResult.innerHTML = convertedVolume
-}
-function kilogramToPounds(input) {
-    let convertedMass = ""
-    let pounds = input
-    let kilograms = input
-    pounds = input * 2.204
-    kilograms = input / 2.204
-    convertedMass = ` ${input} kilograms = ${pounds.toFixed(3)} pounds | ${input} pounds = ${kilograms.toFixed(3)} kilograms `
-    massResult.innerHTML = convertedMass
+function convert(input, conversionRate, stringOne, stringTwo) {
+    
+    let convertedString = ""
+    let metricOne = input
+    let metricTwo = input
+
+    metricOne = input * conversionRate
+    metricTwo = input / conversionRate
+
+    convertedString = ` ${input} ${stringOne} = ${metricOne.toFixed(3)} ${stringTwo} | ${input} ${stringTwo} = ${metricTwo.toFixed(3)} ${stringOne} `
+    return convertedString
 }
